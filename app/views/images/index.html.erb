@@ -1,0 +1,11 @@
+<h2>Create New Image</h2>
+<%= form_for @image do |f| %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.submit %>
+<% end %>
+<hr>
+<% @images.each do |image| %>
+  <%= image_tag(image.image_url) %>
+  <%= link_to "Delete", image_path(image), method: :delete %>
+<% end %>
