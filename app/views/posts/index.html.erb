@@ -1,7 +1,7 @@
 <h2>Create New Image</h2>
 <%= form_for @post do |f| %>
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.file_field :image %>
   <%= f.submit %>
 <% end %>
 <hr>
